@@ -1,0 +1,39 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+
+
+ <div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">country name</th>
+                <th scope="col">population</th>
+                <th scope="col">goverment</th>
+                <th scope="col">coordinates</th>
+
+            </tr>
+        </thead>
+        
+        <tbody>
+        {% for user in country %}
+        <tr>
+            <td> {{user.country_name }} </td>
+            <td> {{user.population}} </td>
+            <td> {{user.goverment}} </td>
+            <td> {{user.coordinates}} </td>
+                                 <td>
+                </td>
+        </tr>
+        {% endfor %}
+            <tr>
+                <td> <a href="/insert" button type="button" class="btn btn-success" name="btn_new_country">New Country</a> </td>
+            </tr>
+
+        </tbody>
+    </table>
+ </div>
+
+
+{% endblock %}
